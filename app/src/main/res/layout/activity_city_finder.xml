@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#242343"
-    tools:context=".cityFinder">
+    android:background="#121212"
+    tools:context=".controller.cityFinder">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:hint="Enter City Name"
+        android:hint="@string/informe_o_nome_da_cidade"
         android:layout_marginLeft="30dp"
         android:textSize="20sp"
         android:background="@drawable/edittextdesign"

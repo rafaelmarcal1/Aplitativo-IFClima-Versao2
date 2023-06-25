@@ -1,4 +1,4 @@
-package br.edu.ifsp.dmo.aplicativoifclimav1;
+package br.edu.ifsp.dmo.aplicativoifclimav1.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +24,9 @@ import com.loopj.android.http.RequestParams;
 
 import org.json.JSONObject;
 
+import br.edu.ifsp.dmo.aplicativoifclimav1.R;
+import br.edu.ifsp.dmo.aplicativoifclimav1.controller.cityFinder;
+import br.edu.ifsp.dmo.aplicativoifclimav1.controller.weatherData;
 import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity {

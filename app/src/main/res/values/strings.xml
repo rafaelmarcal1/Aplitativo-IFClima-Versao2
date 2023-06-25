@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AplicativoIFClimaV1</string>
+    <string name="informe_o_nome_da_cidade">Informe o nome da Cidade</string>
+    <string name="fetching">Buscando___</string>
+    <string name="quer_pesquisar_outra_cidade">Quer Pesquisar outra cidade?</string>
+    <string name="Tira">---------</string>
+    <string name="_0_c">0*C</string>
 </resources>

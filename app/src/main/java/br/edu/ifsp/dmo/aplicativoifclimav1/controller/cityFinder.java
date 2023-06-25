@@ -1,18 +1,18 @@
-package br.edu.ifsp.dmo.aplicativoifclimav1;
+package br.edu.ifsp.dmo.aplicativoifclimav1.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import br.edu.ifsp.dmo.aplicativoifclimav1.R;
+import br.edu.ifsp.dmo.aplicativoifclimav1.view.MainActivity;
 
 public class cityFinder extends AppCompatActivity {
 
@@ -34,7 +34,7 @@ public class cityFinder extends AppCompatActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 String newCity= editText.getText().toString();
-                Intent intent=new Intent(cityFinder.this,MainActivity.class);
+                Intent intent=new Intent(cityFinder.this, MainActivity.class);
                 intent.putExtra("City",newCity);
                 startActivity(intent);
 
