@@ -86,6 +86,7 @@ public class weatherData {
         return "dunno";
     }
 
+    //Getters e Setters
     public String getmTemperature() {
         return mTemperature+"°C";
     }

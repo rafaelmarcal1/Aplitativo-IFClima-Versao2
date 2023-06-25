@@ -31,23 +31,17 @@ import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Variáveis
+    private final String APP_ID = "dab3af44de7d24ae7ff86549334e45bd"; //Variável APP_ID recebe a minha chave da API
+    private final String WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"; //Variável WEATHER_URL recebe a url do site da API
 
-    final String APP_ID = "dab3af44de7d24ae7ff86549334e45bd";
-    final String WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather";
-
-    final long MIN_TIME = 5000;
-    final float MIN_DISTANCE = 1000;
-    final int REQUEST_CODE = 101;
-
-
+    private final long MIN_TIME = 5000; //
+    private final float MIN_DISTANCE = 1000;
+    private final int REQUEST_CODE = 101;
     String Location_Provider = LocationManager.GPS_PROVIDER;
-
     TextView NameofCity, weatherState, Temperature;
     ImageView mweatherIcon;
-
     RelativeLayout mCityFinder;
-
-
     LocationManager mLocationManager;
     LocationListener mLocationListner;
 
@@ -57,12 +51,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Recupera valores pela classe R, desculpe a gambiarra
         weatherState = findViewById(R.id.weatherCondition);
         Temperature = findViewById(R.id.temperature);
         mweatherIcon = findViewById(R.id.weatherIcon);
         mCityFinder = findViewById(R.id.cityFinder);
         NameofCity = findViewById(R.id.cityName);
-
 
         mCityFinder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,11 +87,7 @@ public class MainActivity extends AppCompatActivity {
         {
             getWeatherForCurrentLocation();
         }
-
-
     }
-
-
     private void getWeatherForNewCity(String city)
     {
         RequestParams params=new RequestParams();
@@ -106,10 +96,6 @@ public class MainActivity extends AppCompatActivity {
         letsdoSomeNetworking(params);
 
     }
-
-
-
-
     private void getWeatherForCurrentLocation() {
 
         mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -125,10 +111,6 @@ public class MainActivity extends AppCompatActivity {
                 params.put("lon",Longitude);
                 params.put("appid",APP_ID);
                 letsdoSomeNetworking(params);
-
-
-
-
             }
 
             @Override
