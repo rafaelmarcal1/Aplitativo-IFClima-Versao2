@@ -192,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
-                Toast.makeText(MainActivity.this,"Data Get Success",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"Dados encontrados com sucesso",Toast.LENGTH_SHORT).show();
 
                 weatherData weatherD=weatherData.fromJson(response);
                 updateUI(weatherD);
@@ -233,12 +233,3 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
-
-
-
-
-
-
-
-
