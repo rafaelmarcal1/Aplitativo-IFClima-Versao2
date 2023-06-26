@@ -26,7 +26,7 @@ import org.json.JSONObject;
 
 import br.edu.ifsp.dmo.aplicativoifclimav1.R;
 import br.edu.ifsp.dmo.aplicativoifclimav1.controller.cityFinder;
-import br.edu.ifsp.dmo.aplicativoifclimav1.controller.weatherData;
+import br.edu.ifsp.dmo.aplicativoifclimav1.model.weatherData;
 import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity {
@@ -112,21 +112,6 @@ public class MainActivity extends AppCompatActivity {
                 params.put("appid",APP_ID);
                 letsdoSomeNetworking(params);
             }
-
-            @Override
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-
-            }
-
-            @Override
-            public void onProviderEnabled(String provider) {
-
-            }
-
-            @Override
-            public void onProviderDisabled(String provider) {
-                //not able to get location
-            }
         };
 
 
@@ -155,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         {
             if(grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED)
             {
-                Toast.makeText(MainActivity.this,"Locationget Succesffully",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"Localização achada com sucesso",Toast.LENGTH_SHORT).show();
                 getWeatherForCurrentLocation();
             }
             else

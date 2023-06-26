@@ -1,4 +1,4 @@
-package br.edu.ifsp.dmo.aplicativoifclimav1.controller;
+package br.edu.ifsp.dmo.aplicativoifclimav1.model;
 
 import org.json.JSONException;
 import org.json.JSONObject;
